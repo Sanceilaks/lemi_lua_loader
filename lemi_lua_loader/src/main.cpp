@@ -18,7 +18,7 @@ BOOL WINAPI DllMain(HMODULE dll, DWORD  reason_for_call, LPVOID reserved)
 	dll_instance = dll;
 	DisableThreadLibraryCalls(dll);
 	if (reason_for_call == DLL_PROCESS_ATTACH)
-		std::thread(start).detach(); //CreateThread doesn't work on x64
+		std::thread(start).detach(); //CreateThread suck
 	
 	return TRUE;
 }
